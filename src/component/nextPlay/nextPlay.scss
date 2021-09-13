@@ -1,0 +1,42 @@
+.nextPlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  .icon_control {
+    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+    cursor: pointer;
+    &:hover {
+      border-color: rgb(111, 107, 156);
+      .icon_play,
+      .icon_pause {
+        color: rgb(111, 107, 156);
+      }
+    }
+
+    .icon_play,
+    .icon_pause {
+      transform: translateX(2px);
+      color: white;
+      font-size: 1.7rem;
+      margin: 0;
+    }
+  }
+  .icon {
+    color: white;
+    font-size: 1.7rem;
+    margin: 0;
+    margin: 0 15px;
+    cursor: pointer;
+    &:hover {
+      color: rgb(111, 107, 156);
+    }
+  }
+}

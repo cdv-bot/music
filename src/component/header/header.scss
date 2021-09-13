@@ -1,0 +1,25 @@
+#header {
+  display: flex;
+  justify-content: center;
+  ul {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(101, 87, 122);
+    border-radius: 100px;
+    padding: 3px;
+    li {
+      list-style: none;
+      padding: 10px 40px;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #b0a6b6;
+      cursor: pointer;
+    }
+  }
+}
+
+.bgrColor {
+  color: white !important;
+  background-color: #746584;
+  border-radius: 100px;
+}

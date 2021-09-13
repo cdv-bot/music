@@ -1,0 +1,153 @@
+#main {
+  margin-top: 100px;
+  overflow-x: hidden;
+  ul {
+    display: flex;
+    align-items: flex-end;
+    list-style: none;
+    li {
+      margin-right: 10px;
+      cursor: pointer;
+      &:hover {
+        .name {
+          visibility: inherit;
+        }
+      }
+      .item_list {
+        position: relative;
+        img {
+          height: 340px;
+          width: 340px;
+          border-radius: 5px;
+        }
+
+        &:hover {
+          .icon_play {
+            display: flex;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(61, 57, 57, 0.3);
+          }
+          .name {
+            visibility: inherit;
+          }
+        }
+        .icon_play {
+          display: none;
+          align-items: center;
+          position: absolute;
+          z-index: 3;
+          top: 50%;
+          right: 50%;
+          transform: translate(50%, -50%);
+          .bd_icon_play {
+            width: 78px;
+            height: 78px;
+            border: 3px solid white;
+            border-radius: 40px;
+            margin: 0 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .play_icon {
+            font-size: 3rem;
+            padding-left: 3px;
+            color: white;
+            margin: 0 30px;
+            &:hover {
+              color: rgb(241, 233, 233);
+            }
+          }
+          .action_icon {
+            font-size: 2.8rem;
+            color: white;
+          }
+          .icon {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            padding: 7px;
+            border-radius: 30px;
+            &:hover {
+              background-color: rgba(226, 202, 226, 0.6);
+            }
+          }
+        }
+        .gif_play_chart {
+          position: absolute;
+          z-index: 3;
+          width: 30px;
+          height: 30px;
+          bottom: 15px;
+          left: 20px;
+        }
+      }
+      .name {
+        visibility: hidden;
+        text-align: center;
+
+        p {
+          margin: 10px 0;
+          margin-bottom: 5px;
+          &:nth-child(1) {
+            font-size: 2.3rem;
+            font-weight: bold;
+            color: white;
+          }
+          &:nth-child(2) {
+            color: rgb(200, 195, 207);
+            font-size: 1.5rem;
+            margin-top: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+.pickPlay {
+  height: 400px !important;
+  width: 400px !important;
+}
+//tooltip
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 135%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
